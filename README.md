@@ -261,7 +261,7 @@ Required GitHub repository secrets:
 - `SEALOS_NAMESPACE` — target namespace, for example `discovery`
 - `SUPABASE_DATABASE_URL` — Supabase Postgres connection string
 - `DISCOVERY_ADMIN_API_KEY` — admin API key for `/admin/*`
-- `DISCOVERY_OPENROUTER_API_KEY` — optional OpenRouter token
+- `OPENROUTER_API_KEY` — optional OpenRouter token
 - `SEALOS_INGRESS_HOST` — optional public hostname for ingress
 
 Files:

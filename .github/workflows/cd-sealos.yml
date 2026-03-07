@@ -20,7 +20,7 @@ jobs:
       SEALOS_NAMESPACE: ${{ secrets.SEALOS_NAMESPACE }}
       SUPABASE_DATABASE_URL: ${{ secrets.SUPABASE_DATABASE_URL }}
       DISCOVERY_ADMIN_API_KEY: ${{ secrets.DISCOVERY_ADMIN_API_KEY }}
-      DISCOVERY_OPENROUTER_API_KEY: ${{ secrets.DISCOVERY_OPENROUTER_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       SEALOS_INGRESS_HOST: ${{ secrets.SEALOS_INGRESS_HOST }}
     steps:
       - name: Checkout
@@ -71,7 +71,7 @@ jobs:
           kubectl -n "$SEALOS_NAMESPACE" create secret generic discovery-env \
             --from-literal=DATABASE_URL="$SUPABASE_DATABASE_URL" \
             --from-literal=ADMIN_API_KEY="$DISCOVERY_ADMIN_API_KEY" \
-            --from-literal=OPENROUTER_API_KEY="$DISCOVERY_OPENROUTER_API_KEY" \
+            --from-literal=OPENROUTER_API_KEY="$OPENROUTER_API_KEY" \
             --dry-run=client -o yaml | kubectl apply -f -
 
       - name: Render manifests
