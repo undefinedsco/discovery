@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": "openai/gpt-5.4",
+      "canonical_slug": "openai/gpt-5.4-20260305",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-5.4",
+      "created": 1772734352,
+      "description": "OpenAI frontier model.",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": ["text", "image", "file"],
+        "output_modalities": ["text"],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000025",
+        "completion": "0.000015",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000025"
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "include_reasoning"
+      ],
+      "default_parameters": {},
+      "expiration_date": null
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.5",
+      "canonical_slug": "anthropic/claude-sonnet-4.5-preview",
+      "hugging_face_id": null,
+      "name": "Anthropic: Claude Sonnet 4.5 Preview",
+      "created": 1772000000,
+      "description": "Preview Anthropic model.",
+      "context_length": 250000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": ["text"],
+        "output_modalities": ["text"],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000003",
+        "completion": "0.000015"
+      },
+      "top_provider": {
+        "context_length": 250000,
+        "max_completion_tokens": 32000,
+        "is_moderated": true
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {},
+      "expiration_date": "2099-01-01T00:00:00.000Z"
+    }
+  ]
+}
