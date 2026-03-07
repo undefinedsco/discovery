@@ -27,6 +27,8 @@ spec:
               value: 0.0.0.0
             - name: PORT
               value: '3000'
+            - name: NODE_OPTIONS
+              value: --dns-result-order=ipv4first
             - name: DISCOVERY_SYNC_ON_START
               value: 'true'
             - name: PGPOOL_MAX
