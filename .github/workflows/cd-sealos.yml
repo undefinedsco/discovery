@@ -63,8 +63,8 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
 
-      - name: Ensure namespace
-        run: kubectl create namespace "$SEALOS_NAMESPACE" --dry-run=client -o yaml | kubectl apply -f -
+      - name: Verify namespace
+        run: kubectl get namespace "$SEALOS_NAMESPACE"
 
       - name: Apply runtime secret
         run: |
