@@ -88,6 +88,7 @@ jobs:
         run: |
           kubectl apply -f /tmp/discovery-deployment.yaml
           kubectl apply -f /tmp/discovery-service.yaml
+          kubectl -n "$SEALOS_NAMESPACE" rollout restart deploy/discovery
           kubectl -n "$SEALOS_NAMESPACE" rollout status deploy/discovery --timeout=180s
 
       - name: Apply ingress if configured
